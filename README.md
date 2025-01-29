@@ -20,7 +20,10 @@ Diseño inspirado del sitio oficial [Recetas Nestlé](https://www.recetasnestle.
 
 Instrucciones para el desarrollo:
 
-- clona el repositorio junto con la rama "develop" (esta es la rama donde se subira el codigo para probar en general el proyecto antes de ir a produccion en la rama "main", NO MODIFICAR LA RAMA "main")
-- tanto el equipo frontend como el equipo backend deben crear sus ramas por SEPARADOS donde subiran su codigo FUNCIONAL Y LISTO para posteriormente mandar sus commits a la rama "develop" (recuerda que aqui en "develop" se mezcla el codigo del backend y frontend para ser probados antes de mandarlo a produccion).
+- clona el repositorio junto con la rama donde estas trabajando ("frontend" o "backend")
+- tanto el equipo frontend como el equipo backend tienen sus ramas por SEPARADOS ("frontend" y "backend") donde subiran su codigo FUNCIONAL Y LISTO para posteriormente ser probado en la rama "develop" (la rama "develop" no es necesario que la guardes localmente, ya que esa es para juntar el frontend y backend para hacer pruebas).
+- si eres frontend, unicamente subiras tus cambios a la rama "frontend"
+- si eres de backend, uncamente subiras tus cambios a la rama "backend"
+- el administrador del repositorio cuando sea el momento fucionara las ramas "frontend" y "backend" en la rama "develop" para probar el codigo en conjunto.
 
 Si tienes algun problema no dudes en recurrir al chat de discord para ayudarte a solucionar cualquier problema.
