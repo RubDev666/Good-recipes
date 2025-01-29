@@ -1,7 +1,7 @@
 # Good recipes
 Proyecto actualmente en desarrollo.
 
-Diseño inspirado del sitio oficial [Recetas Nestlé](https://www.recetasnestle.com.mx/).
+Diseño inspirado del sitio oficial [Recetas Nestlé](https://www.recetasnestle.com.mx/)
 
 ## Colaboradores:
 
