@@ -3,7 +3,19 @@
 :root {
     --color-1: #e50077;
     --color-2: #471f05;
-    --color-3: #fff;
+    --color-3: #252525;
+    --color-4: #252525;
+    --color-5: #ffffff;
+    --color-6: #efe8e2;
+    --color-7: #252525;
+    --color-8: #ede7e2;
+    --color-9: #f2af29;
+    --color-10: #006600;
+    --color-11: #ea4335;
+    --color-12: #ea4335;
+    --color-13: #ed7d42;
+    --color-14: #471f05;
+    --color-15: #db3229;
 }
 
 * {
