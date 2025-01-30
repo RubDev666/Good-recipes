@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faInstagram,
-  faFacebook,
-  faYoutube,
-  faPinterest,
-  faTiktok,
+    faInstagram,
+    faFacebook,
+    faYoutube,
+    faPinterest,
+    faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+
+import LogoProject from "./ui/Logo";
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -129,18 +131,19 @@ const FooterLogos = styled.div`
 `;
 
 const Logo = styled(Link)`
-  width: fit-content;
   margin: 0 auto;
   cursor: pointer;
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
+
+  svg {
+        width: 70px;
+        height: 70px;
+    }
+
   @media (min-width: 992px) {
     margin: auto;
-    img {
-      width: 5.3125rem;
+    svg {
+        width: 90px;
+        height: 90px;
     }
   }
 `;
@@ -239,212 +242,207 @@ const Copyright = styled.div`
 `;
 
 const footerItems = [
-  {
-    title: "Mapa del sitio",
-    items: [
-      {
-        label: "Todas las recetas",
-        href: "#",
-      },
-      {
-        label: "Listas Nestlé",
-        href: "#",
-      },
-      {
-        label: "Elige los ingredientes",
-        href: "#",
-      },
-      {
-        label: "Recetarios descargables",
-        href: "#",
-      },
-      {
-        label: "Planea tu menú",
-        href: "#",
-      },
-      {
-        label: "Sitemap",
-        href: "#",
-      },
-    ],
-  },
-  {
-    title: "Escuela del sabor",
-    items: [
-      {
-        label: "Todos los artículos",
-        href: "#",
-      },
-      {
-        label: "Tips",
-        href: "#",
-      },
-      {
-        label: "Cocción y técnica",
-        href: "#",
-      },
-      {
-        label: "Recetas caseras",
-        href: "#",
-      },
-      {
-        label: "Aprendiendo a cocinar",
-        href: "#",
-      },
-      {
-        label: "Ingredientes",
-        href: "#",
-      },
-      {
-        label: "Utensilios",
-        href: "#",
-      },
-      {
-        label: "Cocinando con niños",
-        href: "#",
-      },
-    ],
-  },
-  {
-    title: "Categorías de recetas",
-    items: [
-      {
-        label: "Todas las categorías",
-        href: "#",
-      },
-      {
-        label: "Desayunos",
-        href: "#",
-      },
-      {
-        label: "Recetas con pollo",
-        href: "#",
-      },
-      {
-        label: "Parrilladas",
-        href: "#",
-      },
-      {
-        label: "Plato fuerte",
-        href: "#",
-      },
-      {
-        label: "Postres",
-        href: "#",
-      },
-      {
-        label: "Pasteles",
-        href: "#",
-      },
-    ],
-  },
+    {
+        title: "Mapa del sitio",
+        items: [
+            {
+                label: "Todas las recetas",
+                href: "#",
+            },
+            {
+                label: "Listas Nestlé",
+                href: "#",
+            },
+            {
+                label: "Elige los ingredientes",
+                href: "#",
+            },
+            {
+                label: "Recetarios descargables",
+                href: "#",
+            },
+            {
+                label: "Planea tu menú",
+                href: "#",
+            },
+            {
+                label: "Sitemap",
+                href: "#",
+            },
+        ],
+    },
+    {
+        title: "Escuela del sabor",
+        items: [
+            {
+                label: "Todos los artículos",
+                href: "#",
+            },
+            {
+                label: "Tips",
+                href: "#",
+            },
+            {
+                label: "Cocción y técnica",
+                href: "#",
+            },
+            {
+                label: "Recetas caseras",
+                href: "#",
+            },
+            {
+                label: "Aprendiendo a cocinar",
+                href: "#",
+            },
+            {
+                label: "Ingredientes",
+                href: "#",
+            },
+            {
+                label: "Utensilios",
+                href: "#",
+            },
+            {
+                label: "Cocinando con niños",
+                href: "#",
+            },
+        ],
+    },
+    {
+        title: "Categorías de recetas",
+        items: [
+            {
+                label: "Todas las categorías",
+                href: "#",
+            },
+            {
+                label: "Desayunos",
+                href: "#",
+            },
+            {
+                label: "Recetas con pollo",
+                href: "#",
+            },
+            {
+                label: "Parrilladas",
+                href: "#",
+            },
+            {
+                label: "Plato fuerte",
+                href: "#",
+            },
+            {
+                label: "Postres",
+                href: "#",
+            },
+            {
+                label: "Pasteles",
+                href: "#",
+            },
+        ],
+    },
 ];
 
 const socialLinks = [
-  {
-    icon: faInstagram,
-    href: "https://www.instagram.com/recetasnestle/",
-  },
-  {
-    icon: faFacebook,
-    href: "https://www.facebook.com/Recetas-Nestl%C3%A9-142919275994/",
-  },
-  {
-    icon: faYoutube,
-    href: "https://www.youtube.com/channel/UCWIgEeSnQT6tZ6BLAh_ot5Q",
-  },
-  {
-    icon: faPinterest,
-    href: "https://www.pinterest.com/recetasnestle/",
-  },
-  {
-    icon: faTiktok,
-    href: "https://www.tiktok.com/@recetasnestlemx",
-  },
+    {
+        icon: faInstagram,
+        href: "https://www.instagram.com/recetasnestle/",
+    },
+    {
+        icon: faFacebook,
+        href: "https://www.facebook.com/Recetas-Nestl%C3%A9-142919275994/",
+    },
+    {
+        icon: faYoutube,
+        href: "https://www.youtube.com/channel/UCWIgEeSnQT6tZ6BLAh_ot5Q",
+    },
+    {
+        icon: faPinterest,
+        href: "https://www.pinterest.com/recetasnestle/",
+    },
+    {
+        icon: faTiktok,
+        href: "https://www.tiktok.com/@recetasnestlemx",
+    },
 ];
 
 const copyrightItems = [
-  {
-    href: "#",
-    label: "Aviso de privacidad",
-  },
-  {
-    href: "#",
-    label: "Términos y condiciones",
-  },
-  {
-    href: "#",
-    label: "Contáctanos",
-  },
-  {
-    href: "#",
-    label: "Configuración de cookies",
-  },
+    {
+        href: "#",
+        label: "Aviso de privacidad",
+    },
+    {
+        href: "#",
+        label: "Términos y condiciones",
+    },
+    {
+        href: "#",
+        label: "Contáctanos",
+    },
+    {
+        href: "#",
+        label: "Configuración de cookies",
+    },
 ];
 
 export const Footer = () => {
-  return (
-    <StyledFooter>
-      <Container>
-        <FooterNavigation>
-          <FooterMenuNavigation>
-            {footerItems.map((footerItem, idx) => (
-              <FooterMenuNavigationLi key={idx}>
-                <FooterMenuNavigationTitle>
-                  {footerItem.title}
-                </FooterMenuNavigationTitle>
+    return (
+        <StyledFooter>
+            <Container>
+                <FooterNavigation>
+                    <FooterMenuNavigation>
+                        {footerItems.map((footerItem, idx) => (
+                            <FooterMenuNavigationLi key={idx}>
+                                <FooterMenuNavigationTitle>
+                                    {footerItem.title}
+                                </FooterMenuNavigationTitle>
 
-                <FooterMenuNavigationUl>
-                  {footerItem.items.map((item, itemIdx) => (
-                    <FooterMenuNavigationUlLi key={itemIdx}>
-                      <FooterMenuNavigationUlLiA to={item.href}>
-                        {item.label}
-                      </FooterMenuNavigationUlLiA>
-                    </FooterMenuNavigationUlLi>
-                  ))}
-                </FooterMenuNavigationUl>
-              </FooterMenuNavigationLi>
-            ))}
-          </FooterMenuNavigation>
-        </FooterNavigation>
+                                <FooterMenuNavigationUl>
+                                    {footerItem.items.map((item, itemIdx) => (
+                                        <FooterMenuNavigationUlLi key={itemIdx}>
+                                            <FooterMenuNavigationUlLiA to={item.href}>
+                                                {item.label}
+                                            </FooterMenuNavigationUlLiA>
+                                        </FooterMenuNavigationUlLi>
+                                    ))}
+                                </FooterMenuNavigationUl>
+                            </FooterMenuNavigationLi>
+                        ))}
+                    </FooterMenuNavigation>
+                </FooterNavigation>
 
-        <FooterLogos>
-          <Logo to="/">
-            <img
-              src="https://www.recetasnestle.com.mx/themes/custom/cookit/Content/img/logo.svg"
-              alt="Recetas Nestlé Logo"
-              width={67}
-              height={32}
-            />
-          </Logo>
-          <FooterSocials>
-            {socialLinks.map((link, idx) => (
-              <li key={idx}>
-                <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon
-                    icon={link.icon}
-                    style={{ fontSize: "20px" }}
-                  />
-                </a>
-              </li>
-            ))}
-          </FooterSocials>
-        </FooterLogos>
+                <FooterLogos>
+                    <Logo to="/">
+                        <LogoProject fill="#471f05" />
+                    </Logo>
+                    <FooterSocials>
+                        {socialLinks.map((link, idx) => (
+                            <li key={idx}>
+                                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon
+                                        icon={link.icon}
+                                        style={{ fontSize: "20px" }}
+                                    />
+                                </a>
+                            </li>
+                        ))}
+                    </FooterSocials>
+                </FooterLogos>
 
-        <Copyright>
-          <p>
-            ©2019, Nestlé. Marcas registradas por Société des produits Nestlé,
-            S.A. Vevey (Suiza)
-          </p>
-          <ul>
-            {copyrightItems.map((item, idx) => (
-              <li key={idx}>
-                <Link to={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </Copyright>
-      </Container>
-    </StyledFooter>
-  );
+                <Copyright>
+                    <p>
+                        ©2019, Nestlé. Marcas registradas por Société des produits Nestlé,
+                        S.A. Vevey (Suiza)
+                    </p>
+                    <ul>
+                        {copyrightItems.map((item, idx) => (
+                            <li key={idx}>
+                                <Link to={item.href}>{item.label}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </Copyright>
+            </Container>
+        </StyledFooter>
+    );
 };
