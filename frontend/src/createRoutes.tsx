@@ -23,11 +23,11 @@ const router = createBrowserRouter([
                 element: <Meals />,
             },
             {
-                path: '/meals/:category',
+                path: '/meals/category/:category',
                 element: <CategoryMeals />,
             },
             {
-                path: '/meals/:category/:IdRecipe',
+                path: '/meals/recipe/:IdRecipe',
                 element: <RecipeMeals />,
             },
             {
@@ -35,11 +35,11 @@ const router = createBrowserRouter([
                 element: <Cocktails />,
             },
             {
-                path: '/cocktails/:category',
+                path: '/cocktails/category/:category',
                 element: <CategoryCocktails />,
             },
             {
-                path: '/cocktails/:category/:IdRecipe',
+                path: '/cocktails/recipe/:IdRecipe',
                 element: <RecipeCocktail />,
             },
             {
