@@ -37,12 +37,12 @@ font-weight: 600;
 export const Tag_food = styled.p`
     color: #ffffff;
     background-color: #ea4335;
-    padding-inline: 2%;
+    padding: 1% 2%;
     border-radius: 10px;
 `
 export const Tag_drinks = styled.p`
     color: #ffffff;
     background-color: #f2af29;
-    padding-inline: 2%;
+    padding: 1% 2%;
     border-radius: 10px;
 `

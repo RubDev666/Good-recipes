@@ -1,6 +1,8 @@
 import React from 'react'
 import * as S from './Card.styles'
 import { Link } from 'react-router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faCutlery } from '@fortawesome/free-solid-svg-icons'
 
 interface Props {
     title: string
@@ -18,11 +20,15 @@ export const Card: React.FC<Props> = ({ title, image, tag }) => {
                 <S.Container_info>
                     <S.Title>{title}</S.Title>
                     {
-                        tag?.toLowerCase() === 'comida'
-                        ?
-                        <S.Tag_food>{tag}</S.Tag_food>
+                        tag?.toLowerCase().trim() === 'comida'
+                        ? 
+                        <S.Tag_food>
+                            <FontAwesomeIcon icon={faCutlery} />
+                        </S.Tag_food>
                         :
-                        <S.Tag_drinks>{tag}</S.Tag_drinks>
+                        <S.Tag_drinks>
+                            <FontAwesomeIcon icon={faCoffee} />
+                        </S.Tag_drinks>
 
                     }
                 </S.Container_info>
