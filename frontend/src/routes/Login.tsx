@@ -32,7 +32,7 @@ export default function Login() {
                     <button type="submit"
                         className="submitButton"
                     >
-                        Registrarse
+                        Iniciar sesión
                     </button>
                 </Form>
             </section>
