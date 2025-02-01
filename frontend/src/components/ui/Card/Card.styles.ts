@@ -5,6 +5,11 @@ export const Container = styled.section`
     margin-inline: 2%;
     display:flex;
     flex-direction: column;
+    
+    a {
+        color: #252525;
+        text-decoration: none;
+    }
 `
 export const Container_image = styled.div`
 display: flex;
@@ -19,9 +24,25 @@ display: flex;
      object-fit: cover;
     }
 `
-
+export const Container_info = styled.article`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
 export const Title = styled.p`
 font-size: 22px;
 color: #471f05;
 font-weight: 600;
+`
+export const Tag_food = styled.p`
+    color: #ffffff;
+    background-color: #ea4335;
+    padding-inline: 2%;
+    border-radius: 10px;
+`
+export const Tag_drinks = styled.p`
+    color: #ffffff;
+    background-color: #f2af29;
+    padding-inline: 2%;
+    border-radius: 10px;
 `
