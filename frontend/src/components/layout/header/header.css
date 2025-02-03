@@ -1,0 +1,147 @@
+/* Estilos generales */
+.header {
+  background-color: #e50077;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 30px;
+  margin-left: left;
+  margin-left: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 0%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sign In / Sign Up */
+.auth {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 55px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: #e50077;
+}
+
+.auth-link:hover {
+  background-color: #ffffff;
+  border: 2px solid #e50077;
+  color: #e50077;
+}
+
+.auth-button,
+.sigin {
+  background-color: #ffffff;
+  color: #e50077;
+  padding: 8px 55px;
+  border-radius: 20px;
+  border-color: #ffffff;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+.auth-button:hover {
+  background-color: #e50077;
+  border: 2px solid white;
+  color: #ffffff;
+}
+
+/* Menú móvil */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Menú desplegable en móviles */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: #e50077;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  height: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-3px);
+}
+.mobile-menu.open {
+  opacity: 1;
+  transform: translateY(3px);
+  transition: opacity 2s ease-out, transform 2s ease-out,
+    visibility 1s linear 1s;
+}
+.mobile-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  display: flex;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .nav,
+  .auth-link {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+
+  .auth-button,
+  .sigin {
+    padding: 8px 15px;
+    margin-right: 20px;
+  }
+}
