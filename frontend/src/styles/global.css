@@ -22,37 +22,190 @@
     font-family: "Kumbh Sans", serif;
 }
 
-.inputFieldContainer {
-    width: 100%;
-    max-width: 100%;
-    background-color: var(--color-6);
-    display: flex;
-    flex-flow: column nowrap;
+/* Desktop and large screen devices like tablets */
+@media screen and (min-width: 992px) {
+    .formContainer {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin: 2rem 0 2rem 0;
 
-    .inputFieldLabel {
-        max-width: 100%;
-        height: 1.2rem;
-        margin: 1rem 0 .5rem 0;
-        cursor: pointer;
-        text-align: left;
+        .formImage {
+            width: 50%;
+            height: 30rem;
+            background-image: url("../../public/images/nestle-image.webp");
+            background-size: 100% 150%;
+        }
 
+        .form {
+            width: 40%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            .formTitle {
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .inputFieldContainer {
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                .inputFieldLabel {
+                    max-width: 100%;
+                    height: 1.2rem;
+                    margin: 1rem 0 .5rem 0;
+                    cursor: pointer;
+                    text-align: left;
+
+                }
+
+                .inputField {
+                    background-color: transparent;
+                    width: 25rem;
+                    max-width: 30rem;
+                    padding: 0.5rem;
+                    margin-top: 8px;
+                    margin-bottom: 5px;
+                    border-radius: 0.125rem;
+                    border: 1px solid var(--color-7);
+                    outline: 1px solid var(--color-5);
+                    transition: all 0.3s ease-in-out;
+                    font-size: 12px;
+                    text-align: center;
+                }
+
+                .inputField:focus {
+                    outline: 1px solid var(--color-14);
+                    font-size: 13px;
+                }
+            }
+
+            .submitButton {
+                margin: 2rem 0 0 0;
+                padding: .5rem;
+                border-radius: 100px;
+                width: 10rem;
+                transition: all 0.3s ease-in-out;
+                background-color: var(--color-1);
+                color: var(--color-5);
+                border: 1px solid var(--color-1);
+                outline: 1px solid var(--color-1);
+            }
+
+            .submitButton:hover {
+                margin: 2rem 0 0 0;
+                padding: .5rem;
+                border-radius: 100px;
+                background-color: var(--color-5);
+                color: var(--color-1);
+                border: 1px solid var(--color-1);
+                outline: 1px solid var(--color-1);
+                font-weight: bold;
+            }
+        }
     }
+}
 
-    .inputField {
-        background-color: transparent;
-        width: 20rem;
-        padding: 0.5rem;
-        margin-top: 8px;
-        margin-bottom: 5px;
-        border-radius: 0.125rem;
-        border: 1px solid var(--color-7);
-        outline: 1px solid var(--color-5);
-        transition: all 0.3s ease-in-out;
-        font-size: 12px;
-    }
+/* Mobile */
+@media screen and (width <= 992px) {
+    .formContainer {
+        width: 100dvw;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 2rem 0;
 
-    .inputField:focus {
-        outline: 1px solid var(--color-14);
-        font-size: 13px;
+        .formImage {
+            height: 10rem;
+            width: 100%;
+            max-width: 100dvw;
+            background-image: url("/images/nestle-image.webp");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .form {
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+
+            .formTitle {
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
+                
+            }
+
+            .inputFieldContainer {
+                width: 90%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                .inputFieldLabel {
+                    width: 100%;
+                    height: 1.2rem;
+                    margin: 1rem 0 .5rem 0;
+                    cursor: pointer;
+                    text-align: left;
+                }
+
+                .inputField {
+                    background-color: transparent;
+                    width: 100%;
+                    padding: 0.5rem;
+                    margin-top: 8px;
+                    margin-bottom: 5px;
+                    border-radius: 0.125rem;
+                    border: 1px solid var(--color-7);
+                    outline: 1px solid var(--color-5);
+                    transition: all 0.3s ease-in-out;
+                    font-size: 12px;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+
+                .inputField:focus {
+                    outline: 1px solid var(--color-14);
+                    font-size: 13px;
+                }
+            }
+
+            .submitButton {
+                margin: 2rem 0 0 0;
+                padding: .5rem;
+                border-radius: 100px;
+                width: 10rem;
+                transition: all 0.3s ease-in-out;
+                background-color: var(--color-1);
+                color: var(--color-5);
+                border: 1px solid var(--color-1);
+                outline: 1px solid var(--color-1);
+            }
+
+            .submitButton:hover {
+                margin: 2rem 0 0 0;
+                padding: .5rem;
+                border-radius: 100px;
+                background-color: var(--color-5);
+                color: var(--color-1);
+                border: 1px solid var(--color-1);
+                outline: 1px solid var(--color-1);
+                font-weight: bold;
+            }
+        }
     }
 }
