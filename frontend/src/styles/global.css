@@ -16,6 +16,7 @@
     --color-13: #ed7d42;
     --color-14: #471f05;
     --color-15: #db3229;
+    --swiper-theme-color: var(--color-1);
 }
 
 * {

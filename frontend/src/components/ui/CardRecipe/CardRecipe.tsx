@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from './Card.styles'
+import * as S from './CardRecipe.styles'
 import { Link } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faCutlery } from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +10,7 @@ interface Props {
     tag?: string
 }
 
-export const Card: React.FC<Props> = ({ title, image, tag }) => {
+export const CardRecipe: React.FC<Props> = ({ title, image, tag }) => {
     return (
         <S.Container>
             <Link to='/'>
@@ -18,7 +18,6 @@ export const Card: React.FC<Props> = ({ title, image, tag }) => {
                     <img src={image} alt={title} />
                 </S.Container_image>
                 <S.Container_info>
-                    <S.Title>{title}</S.Title>
                     {
                         tag?.toLowerCase().trim() === 'comida'
                         ? 
@@ -31,6 +30,8 @@ export const Card: React.FC<Props> = ({ title, image, tag }) => {
                         </S.Tag_drinks>
 
                     }
+
+                    <S.Title>{title}</S.Title>
                 </S.Container_info>
             </Link>
         </S.Container>
