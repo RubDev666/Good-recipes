@@ -12,7 +12,7 @@ export const Container = styled.section`
     overflow: hidden;
     border-radius: 12px;
     background-color: #e50077;
-    max-width: 250px ;
+    *max-width: 250px ;
     min-width: 200px;
     min-height:250px;
     color: #ffffff;
@@ -29,6 +29,7 @@ export const Container_image = styled.div`
     display: flex;
     width: 100%;
     height: 250px;
+    background: #ede7e2;
 
     img {
         width: 100%;

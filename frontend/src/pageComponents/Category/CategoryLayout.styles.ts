@@ -4,7 +4,7 @@ export const LayoutContainer = styled.section`
     display: grid;
 `
 export const Image_container = styled.div`
-    width: 100svw;
+    *width: 100svw;
     height: auto;
 
     img {
