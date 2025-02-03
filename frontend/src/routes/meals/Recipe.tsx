@@ -3,6 +3,7 @@ import { useLocation } from "react-router";
 
 import { getRecipe } from "../../api/api-actions";
 import type { ApiRecipe } from "../../types/api-types";
+import { RecipeComponent } from "../../components/ui/recipe/Recipe";
 
 export default function RecipeMeal() {
     const [recipe, setRecipe] = useState<ApiRecipe | null>(null);
@@ -30,7 +31,7 @@ export default function RecipeMeal() {
 
     return (
         <>
-            <h1>Recipe meal</h1>
+            <RecipeComponent />
         </>
     )
 }
