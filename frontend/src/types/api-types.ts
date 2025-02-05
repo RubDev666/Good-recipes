@@ -28,9 +28,18 @@ const RecipeSchema = z.object<RecipeModel>({
     strInstructions: z.string()
 });
 
+export interface ApiCategory {
+    idMeal?: string;
+    idDrink?: string;
+    strMeal?: string;
+    strDrink?: string;
+    strMealThumb?: string;
+    strDrinkThumb?: string;
+}
+
 export type ApiCategories = z.infer<typeof ApiCategoriesSchema>;
 export type ApiMealCategory = z.infer<typeof ApiMealCategorySchema>;
 export type ApiDrinkCategory = z.infer<typeof ApiDrinkCategorySchema>
 export type ApiRecipe= z.infer<typeof RecipeSchema>;
 
-export type FetchRecipe = 'meal' | 'drink';
+export type TagRecipe = 'meals' | 'cocktails';

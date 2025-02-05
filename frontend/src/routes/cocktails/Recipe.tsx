@@ -15,7 +15,7 @@ export default function RecipeCocktail() {
             const id = location.pathname.split('/')[3]; //15346
 
             try {
-                const data: ApiRecipe = await getRecipe('drink', id);
+                const data: ApiRecipe = await getRecipe('cocktails', id);
 
                 console.log(data);
 

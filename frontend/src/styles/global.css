@@ -19,8 +19,40 @@
     --swiper-theme-color: var(--color-1);
 }
 
+html {
+    font-size: 16px;
+}
+
 * {
     font-family: "Kumbh Sans", serif;
+}
+
+.text-color-1 {
+    color: var(--color-1);
+}
+
+.text-color-2 {
+    color: var(--color-2);
+}
+
+.container {
+    width: 100%;
+    max-width: 74.375rem;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.slider-title {
+    margin: 0 0 14px 0;
+    font-size: calc(1.1rem + 1vw);
+    color: var(--color-2);
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        padding: 0;
+    }
 }
 
 /* Desktop and large screen devices like tablets */

@@ -15,6 +15,7 @@ export const Container = styled.article`
 export const Container_image = styled.div`
 display: flex;
  width: 100%;
+ max-height: 200px;
  border-radius: 12px;
  overflow: hidden;
  
@@ -23,6 +24,11 @@ display: flex;
      height: auto;
      object-fit: cover;
     }
+
+@media screen and (min-width: 480px) {
+    height: calc(100px + 15vw);
+    max-height: 225px;
+}
 `
 export const Container_info = styled.div`
     display: flex;
@@ -31,20 +37,26 @@ export const Container_info = styled.div`
     padding-bottom: 20px;
 `
 export const Title = styled.p`
-font-size: 22px;
+font-size: calc(16px + 0.4vw);
 color: #471f05;
 font-weight: 600;
 margin: 0;
+
+@media screen and (min-width: 480px) {
+
+}
 `
 export const Tag_food = styled.p`
     color: #ffffff;
     background-color: #ea4335;
-    padding: 1% 2%;
+    font-size: calc(13px + .3vw);
+    padding: 7px 10px;
     border-radius: 100%;
 `
 export const Tag_drinks = styled.p`
     color: #ffffff;
+    font-size: calc(13px + .3vw);
     background-color: #f2af29;
-    padding: 1% 2%;
-    border-radius: 10px;
+    padding: 7px;
+    border-radius: 100%;
 `

@@ -15,7 +15,7 @@ export default function RecipeMeal() {
             const id = location.pathname.split('/')[3]; //52772
 
             try {
-                const data: ApiRecipe = await getRecipe('meal', id);
+                const data: ApiRecipe = await getRecipe('meals', id);
 
                 console.log(data);
 

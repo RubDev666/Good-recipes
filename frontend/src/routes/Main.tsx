@@ -1,9 +1,9 @@
-import Slider from "../components/slider/Slider";
+import MainContent from "../components/mainContent/MainContent"
 
 export default function Main() {
     return (
         <>
-            <Slider />
+            <MainContent />
         </>
     )
 }

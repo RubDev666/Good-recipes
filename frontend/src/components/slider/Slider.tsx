@@ -5,8 +5,9 @@ import {Pagination, Navigation} from 'swiper/modules';
 import { CardRecipe } from '../ui/CardRecipe/CardRecipe';
 
 import { SliderContainer } from './slider.styles';
+import type { SliderProps } from '../../types/props';
 
-export default function Slider() {
+export default function Slider({recipes, tag}: SliderProps) {
     const [loading, setLoading] = useState(true);
     const [slidesView, setSlidesView] = useState(1);
     const [pagination, setPagination] = useState(true);
@@ -14,7 +15,7 @@ export default function Slider() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 580) {
+            if (window.innerWidth < 480) {
                 setSlidesView(1);
                 setPagination(true);
                 setNavigation(false);
@@ -46,7 +47,7 @@ export default function Slider() {
     if(loading) return <p>Loading...</p>;
 
     return (
-        <SliderContainer>
+        <SliderContainer className="container">
             <Swiper
                 spaceBetween={20}
                 slidesPerView={slidesView}
@@ -55,24 +56,19 @@ export default function Slider() {
                 navigation={navigation}
                 modules={[Pagination, Navigation]}
             >
-                <SwiperSlide>
-                    <CardRecipe tag='comida' title="Pollo a la mostaza" image="https://www.recetasnestle.com.mx/sites/default/files/styles/cropped_recipe_card_new/public/srh_recipes/a7d2e2fcd07f73c3873dd323e3e2fad6.jpg.webp?itok=J4jDjK9W" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardRecipe tag='comida' title="Pollo a la mostaza con salsa de kentocky friend chiken con pures" image="https://www.recetasnestle.com.mx/sites/default/files/styles/cropped_recipe_card_new/public/srh_recipes/a7d2e2fcd07f73c3873dd323e3e2fad6.jpg.webp?itok=J4jDjK9W" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardRecipe tag='comida' title="Pollo a la mostaza" image="https://www.recetasnestle.com.mx/sites/default/files/styles/cropped_recipe_card_new/public/srh_recipes/a7d2e2fcd07f73c3873dd323e3e2fad6.jpg.webp?itok=J4jDjK9W" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardRecipe tag='comida' title="Pollo a la mostaza" image="https://www.recetasnestle.com.mx/sites/default/files/styles/cropped_recipe_card_new/public/srh_recipes/a7d2e2fcd07f73c3873dd323e3e2fad6.jpg.webp?itok=J4jDjK9W" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardRecipe tag='comida' title="Pollo a la mostaza" image="https://www.recetasnestle.com.mx/sites/default/files/styles/cropped_recipe_card_new/public/srh_recipes/a7d2e2fcd07f73c3873dd323e3e2fad6.jpg.webp?itok=J4jDjK9W" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardRecipe tag='comida' title="Pollo a la mostaza" image="https://www.recetasnestle.com.mx/sites/default/files/styles/cropped_recipe_card_new/public/srh_recipes/a7d2e2fcd07f73c3873dd323e3e2fad6.jpg.webp?itok=J4jDjK9W" />
-                </SwiperSlide>
+                {recipes.map((recipe) => {
+                    const id = recipe.idMeal ?? recipe.idDrink;
+                    const title = recipe.strMeal ?? recipe.strDrink;
+                    const img = recipe.strMealThumb ?? recipe.strDrinkThumb;
+
+                    if (!id || !title || !img) return null;
+                    
+                    return (
+                        <SwiperSlide key={id}>
+                            <CardRecipe tag={tag} title={title} img={img} id={id} />
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
         </SliderContainer>
     )

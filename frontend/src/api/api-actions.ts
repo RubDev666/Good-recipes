@@ -1,4 +1,4 @@
-import type { FetchRecipe } from "../types/api-types";
+import type { TagRecipe } from "../types/api-types";
 
 const COCKTAILS = [
     {
@@ -85,14 +85,14 @@ export async function getRecipes(url: string) {
     return res.drinks ?? res.meals;
 };
 
-export async function getRecipe(type: FetchRecipe, id: string) {
-    if (type === 'meal') {
+export async function getRecipe(type: TagRecipe, id: string) {
+    if (type === 'meals') {
         const url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id;
 
         const res = await fetch(url).then(respuesta => respuesta.json());
 
         return res.meals[0];
-    } else if (type === 'drink') {
+    } else if (type === 'drinks') {
         const url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + id;
 
         const res = await fetch(url).then(respuesta => respuesta.json());

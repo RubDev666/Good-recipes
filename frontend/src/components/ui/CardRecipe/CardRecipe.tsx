@@ -4,22 +4,18 @@ import { Link } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faCutlery } from '@fortawesome/free-solid-svg-icons'
 
-interface Props {
-    title: string
-    image: string
-    tag?: string
-}
+import type { CardRecipeProps } from '../../../types/props'
 
-export const CardRecipe: React.FC<Props> = ({ title, image, tag }) => {
+export const CardRecipe: React.FC<CardRecipeProps> = ({ title, img, tag, id }) => {
     return (
         <S.Container>
-            <Link to='/'>
+            <Link to={`${tag}/recipe/${id}`}>
                 <S.Container_image>
-                    <img src={image} alt={title} />
+                    <img src={img} alt={title} />
                 </S.Container_image>
                 <S.Container_info>
                     {
-                        tag?.toLowerCase().trim() === 'comida'
+                        tag === 'meals'
                         ? 
                         <S.Tag_food>
                             <FontAwesomeIcon icon={faCutlery} />
