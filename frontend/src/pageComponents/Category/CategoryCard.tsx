@@ -8,15 +8,17 @@ interface Props extends Omit<ApiCategories, 'idCategory'> {
 
 export const CategoryCard: React.FC<Props> = ({ strCategory, strCategoryDescription, strCategoryThumb, title }) => {
     return (
-        <S.StyledLink to={`${title.toLowerCase() === 'cocktails' 
+        <S.StyledLink to={`${title.toLowerCase() === 'cocktails'
             ? `/cocktails/category/${strCategory}`
             : `/meals/category/${strCategory}`
-        }`}>
+            }`}>
             <S.Container>
-                <S.Container_image>
+                <S.Container_image className="container-image">
                     <img src={strCategoryThumb} alt={strCategoryDescription} />
                 </S.Container_image>
-                <p>{strCategory}</p>
+                <S.Container_p>
+                    <p>{strCategory}</p>
+                </S.Container_p>
             </S.Container>
         </S.StyledLink>
     )

@@ -11,27 +11,50 @@ export const Container = styled.section`
     align-items: center;
     overflow: hidden;
     border-radius: 12px;
-    background-color: #e50077;
-    *max-width: 250px ;
+    max-width: 250px ;
     min-width: 200px;
     min-height:250px;
     color: #ffffff;
     text-decoration: none;
-    
-    p {
-        font-weight: bolder;
-        font-size: 20px;
+    transition:all .4s ease-in-out;
+
+    &:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.51); 
+        img{
+            transform:scale(1.1) rotate(-5deg);
+        }
+        
+        .container-image {
+            background:rgb(228, 228, 228);
+        }
     }
-`
+    
+    `
 
 
 export const Container_image = styled.div`
     display: flex;
     width: 100%;
     height: 250px;
-    background: #ede7e2;
-
+    background: #ffffff;
+    overflow:hidden;
+    transition: all .4s ease-in-out;
+    
     img {
+        object-fit: contain;
         width: 100%;
+        transition: transform .4s ease-in-out;
+    }
+    `
+
+export const Container_p = styled.article`
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #e50077;
+    
+    p {
+        font-weight: bolder;
+        font-size: 20px;
     }
 `
