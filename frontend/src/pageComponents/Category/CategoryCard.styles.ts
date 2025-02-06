@@ -11,15 +11,15 @@ export const Container = styled.section`
     align-items: center;
     overflow: hidden;
     border-radius: 12px;
-    max-width: 250px ;
+    *max-width: 250px ;
     min-width: 200px;
-    min-height:250px;
+    *min-height:250px;
     color: #ffffff;
     text-decoration: none;
     transition:all .4s ease-in-out;
 
     &:hover{
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.51); 
+        *box-shadow: 0 8px 16px rgba(0, 0, 0, 0.51); 
         img{
             transform:scale(1.1) rotate(-5deg);
         }
@@ -36,14 +36,15 @@ export const Container_image = styled.div`
     display: flex;
     align-items: end;
     width: 100%;
-    height: 250px;
+    height: 200px;
     background: #ffffff;
     overflow:hidden;
     transition: all .4s ease-in-out;
     
     img {
-        object-fit: contain;
+        object-fit: cover;
         width: 100%;
+        height: 100%;
         transition: transform .4s ease-in-out;
     }
     `
