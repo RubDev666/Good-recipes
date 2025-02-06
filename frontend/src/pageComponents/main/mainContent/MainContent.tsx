@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
-import Slider from "../slider/Slider";
+import { useEffect, useState, useCallback } from "react";
 
-import type { ApiCategory } from "../../types/api-types";
+import type { ApiCategory } from "../../../types/api-types";
+import type { SliderFeatures } from "../../../types/global";
 
 import { Greeting, ImageContainer } from "./mainContent.styles";
+
+import Slider from "../slider/Slider";
+import Spinner from "../../../components/ui/spinner/Spinner";
+ 
+import useSliderFeatures from "../../../hooks/useSliderFeatures";
 
 const MAIN_RECIPES: { [hour: string]: ApiCategory[] } = {
     "morning": [
@@ -135,24 +140,31 @@ const MAIN_RECIPES: { [hour: string]: ApiCategory[] } = {
 }
 
 export default function MainContent() {
-    const [hour, setHour] = useState("");
+    const [state, setState] = useState<{hour: string, size: SliderFeatures | null}>({ hour: "", size: null });
+
+    const {features} = useSliderFeatures();
+
+    const getGreeting = useCallback(() => {
+        const hour = new Date().getHours();
+        let greeting = "";
+
+        if (hour < 12) {
+            greeting = "morning";
+        } else if (hour < 18) {
+            greeting = "afternoon";
+        } else {
+            greeting = "evening";
+        }
+
+        setState(prevState => ({ ...prevState, hour: greeting }));
+    }, []);
 
     useEffect(() => {
         getGreeting();
-    }, []);
 
-    const getGreeting = () => {
-        const now = new Date();
-        const hour = now.getHours();
+    }, [getGreeting]);
 
-        if (hour < 12) {
-            setHour("morning");
-        } else if (hour < 18) {
-            setHour("afternoon");
-        } else {
-            setHour("evening");
-        }
-    };
+    const { hour } = state;
 
     return (
         <main>
@@ -163,12 +175,18 @@ export default function MainContent() {
                 </picture>
             </ImageContainer>
 
-            <div className="container">
-                <Greeting className="text-color-1">{`Good ${hour}.`} </Greeting>
-                <h2 className="slider-title">Welcome to Good Recipes</h2>
-            </div>
+            {(hour !== '' && features) ? (
+                <>
+                    <div className="container">
+                        <Greeting className="text-color-1">{`Good ${hour}.`} </Greeting>
+                        <h2 className="slider-title">Welcome to Good Recipes</h2>
+                    </div>
 
-            {hour !== "" && <Slider recipes={MAIN_RECIPES[hour]} tag={hour === 'evening' ? 'cocktails' : 'meals'} />}
+                    <Slider recipes={MAIN_RECIPES[hour]} tag={hour === 'evening' ? 'cocktails' : 'meals'} sliderFeatures={features} />
+                </>
+            ) : (
+                <Spinner />
+            )}
         </main>
     )
 }

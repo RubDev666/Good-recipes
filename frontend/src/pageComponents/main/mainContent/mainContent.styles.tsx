@@ -17,28 +17,25 @@ export const ImageContainer = styled.div`
     picture {
         position: relative;
 
-        &::before  {
-            left: -100%;
+        &::before,
+        &::after {
             background-position: top right;
             content: "";
             position: absolute;
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://www.recetasnestle.com.mx/sites/default/files/styles/webp/public/2022-07/header-all-categories-mobile.jpg.webp?itok=zaGz___N');
             background-repeat: repeat-x;
+        }
+
+        &::before  {
+            left: -100%;
+            background-image: url('https://www.recetasnestle.com.mx/sites/default/files/styles/webp/public/2022-07/header-all-categories-mobile.jpg.webp?itok=zaGz___N');
         }
 
         &::after  {
             right: -100%;
-            background-position: top right;
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
             background-image: url('https://www.recetasnestle.com.mx/sites/default/files/styles/webp/public/2022-07/header-all-categories-mobile.jpg.webp?itok=zaGz___N');
-            background-repeat: repeat-x;
         }
     }
 
