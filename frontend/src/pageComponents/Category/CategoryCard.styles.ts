@@ -34,6 +34,7 @@ export const Container = styled.section`
 
 export const Container_image = styled.div`
     display: flex;
+    align-items: end;
     width: 100%;
     height: 250px;
     background: #ffffff;
