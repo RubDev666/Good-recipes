@@ -9,8 +9,8 @@ interface Props extends Omit<ApiCategories, 'idCategory'> {
 export const CategoryCard: React.FC<Props> = ({ strCategory, strCategoryDescription, strCategoryThumb, title }) => {
     return (
         <S.StyledLink to={`${title.toLowerCase() === 'cocktails'
-            ? `/cocktails/category/${strCategory}`
-            : `/meals/category/${strCategory}`
+            ? `/cocktails/category/${strCategory.replace('/', '_')}`
+            : `/meals/category/${strCategory.replace('/', '_')}`
             }`}>
             <S.Container>
                 <S.Container_image className="container-image">

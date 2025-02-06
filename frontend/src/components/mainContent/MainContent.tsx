@@ -91,7 +91,46 @@ const MAIN_RECIPES: { [hour: string]: ApiCategory[] } = {
         }
     ],
     "evening": [
-
+        {
+            strDrink: "Blueberry Mojito",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/07iep51598719977.jpg",
+            idDrink: "178336"
+        },
+        {
+            strDrink: "A Night In Old Mandalay",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/vyrvxt1461919380.jpg",
+            idDrink: "17832"
+        },
+        {
+            strDrink: "Casino Royale",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/3qpv121504366699.jpg",
+            idDrink: "11224"
+        },
+        {
+            strDrink: "Wine Cooler",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/yutxtv1473344210.jpg",
+            idDrink: "13056"
+        },
+        {
+            strDrink: "Iced Coffee",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/ytprxy1454513855.jpg",
+            idDrink: "12770"
+        },
+        {
+            strDrink: "Citrus Coke",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/uyrvut1479473214.jpg",
+            idDrink: "17135"
+        },
+        {
+            strDrink: "Limona Corona",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/wwqrsw1441248662.jpg",
+            idDrink: "15086"
+        },
+        {
+            strDrink: "Orange Crush",
+            strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/zvoics1504885926.jpg",
+            idDrink: "15330"
+        }
     ]
 }
 
