@@ -7,6 +7,8 @@ export type SliderProps = {
     sliderFeatures: SliderFeatures;
 }
 
+export type SectionSliderProps = Pick<SliderProps, 'recipes' | 'tag'> & {title: string};
+
 export type CardRecipeProps = {
     tag: TagRecipe;
     title: string;

@@ -10,7 +10,7 @@ export default function Slider({recipes, tag, sliderFeatures}: SliderProps) {
     return (
         <SliderContainer className="container">
             <Swiper
-                spaceBetween={20}
+                spaceBetween={30}
                 slidesPerView={sliderFeatures.slidesView}
                 loop={true}
                 pagination={sliderFeatures.pagination}

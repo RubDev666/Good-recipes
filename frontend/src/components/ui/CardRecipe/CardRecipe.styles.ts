@@ -10,6 +10,7 @@ export const Container = styled.article`
         text-decoration: none;
         margin: auto;
         width: 100%;
+        max-width: 400px;
     }
 `
 export const Container_image = styled.div`
