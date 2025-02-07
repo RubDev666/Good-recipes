@@ -23,7 +23,6 @@
 .nav {
   display: flex;
   gap: 30px;
-  margin-left: left;
   margin-left: 50px;
 }
 
@@ -101,14 +100,11 @@
 
 /* Menú desplegable en móviles */
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
   background: #e50077;
   position: absolute;
   top: 80px;
   left: 0;
   width: 100%;
-  padding: 16px;
   height: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -116,9 +112,15 @@
 }
 .mobile-menu.open {
   opacity: 1;
-  transform: translateY(3px);
+  transform: translateY(0);
+  z-index: 99;
   transition: opacity 2s ease-out, transform 2s ease-out,
     visibility 1s linear 1s;
+}
+.mobile-menu .container-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
 }
 .mobile-link {
   text-decoration: none;
@@ -143,5 +145,9 @@
   .sigin {
     padding: 8px 15px;
     margin-right: 20px;
+  }
+
+  .sigin {
+    margin-right: 0px;
   }
 }

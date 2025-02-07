@@ -9,7 +9,7 @@ import {
   faMartiniGlassCitrus,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -62,20 +62,20 @@ const Header = () => {
 
       {/* Menú desplegable en móvil */}
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <Link to="/meals" className="mobile-link">
-          <FontAwesomeIcon icon={faBowlFood} />
-          Meals
-        </Link>
-        <Link to="/cocktails" className="mobile-link">
-          <FontAwesomeIcon icon={faMartiniGlassCitrus} />
-          Cocktails
-        </Link>
-        <Link to="/sign-in" className="sigin">
-          Sign In
-        </Link>
+        <div className="container-menu">
+          <Link to="/meals" className="mobile-link">
+            <FontAwesomeIcon icon={faBowlFood} />
+            Meals
+          </Link>
+          <Link to="/cocktails" className="mobile-link">
+            <FontAwesomeIcon icon={faMartiniGlassCitrus} />
+            Cocktails
+          </Link>
+          <Link to="/sign-in" className="sigin">
+            Sign In
+          </Link>
+        </div>
       </div>
     </header>
   );
 };
-
-export default Header;
