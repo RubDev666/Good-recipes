@@ -1,5 +1,7 @@
+import { Link } from "react-router";
+
 import MainContent from "../pageComponents/main/mainContent/MainContent";
-import SectionSlider from "../pageComponents/main/sectionSlider/sectionSlider";
+import SectionSlider from "../pageComponents/main/sectionSlider/SectionSlider";
 
 import type { ApiCategory } from "../types/api-types";
 
@@ -86,6 +88,23 @@ export default function Main() {
             <MainContent />
 
             <SectionSlider title="Meals for you" tag="meals" recipes={RECIPES_SECTIONS.meals} />
+
+            <section className='main-sections'>
+                <div className="container">
+                    <h3 className='slider-title'>What are you going to cook today?</h3>
+
+                    <div className='category-links-container'>
+                        <Link to='/meals'>Chiken</Link>
+                        <Link to='/meals'>Starter</Link>
+                        <Link to='/meals'>Beef</Link>
+                        <Link to='/meals'>Vegetarian</Link>
+                        <Link to='/meals'>Goat</Link>
+                        <Link to='/meals'>SeaFood</Link>
+                    </div>
+
+                    <Link to='/meals' className='view-more-link'>View more categories</Link>
+                </div>
+            </section>
 
             <SectionSlider title="For coffee lovers" tag="cocktails" recipes={RECIPES_SECTIONS.coffees} />
         </>

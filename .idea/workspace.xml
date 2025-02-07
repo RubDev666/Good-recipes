@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca1ac8e7-d4fc-46a5-be77-2513cc7bdc66" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/src/pageComponents/main/sectionSlider/sectionSlider.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pageComponents/main/sectionSlider/sectionSlider.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/cocktails/Cocktails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/cocktails/Cocktails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/hooks/useFecthCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/hooks/useFetchCategories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/meals/Meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/meals/Meals.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/global.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RubDev666&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RubDev666/Good-recipes.git&quot;,
+    &quot;accountId&quot;: &quot;d94d2a73-9a3d-4d0c-a824-6068aea9f1a8&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2sijak57QcpBmNWLJ0EVH5xkMKU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Rub666\\Desktop\\RUBEN\\Herramientas de programacion\\PROYECTOS\\Good Recipes\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca1ac8e7-d4fc-46a5-be77-2513cc7bdc66" name="Changes" comment="" />
+      <created>1738945361938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738945361938</updated>
+      <workItem from="1738945365183" duration="2707000" />
+      <workItem from="1738948182949" duration="68000" />
+      <workItem from="1738948274193" duration="1196000" />
+      <workItem from="1738949516596" duration="11000" />
+      <workItem from="1738949557296" duration="185000" />
+      <workItem from="1738949776264" duration="758000" />
+      <workItem from="1738950568201" duration="557000" />
+      <workItem from="1738951157257" duration="472000" />
+      <workItem from="1738951667496" duration="557000" />
+      <workItem from="1738952267884" duration="8968000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

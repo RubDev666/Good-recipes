@@ -2,8 +2,7 @@ import { useEffect, useState } from "react"
 import { ApiCategories } from "../../types/api-types"
 import { getCategories } from "../../api/api-actions";
 
-
-export const useFecthCategories = (url: string) => {
+export const useFetchCategories = (url: string) => {
     const [categories, setCategories] = useState<ApiCategories[] | null>([]);
     const [error, setError] = useState<string | null>(null);
 
@@ -19,6 +18,7 @@ export const useFecthCategories = (url: string) => {
                 setError('Error in fetchCategories')
             }
         }
+
         fetchCategories()
     }, [url])
 
