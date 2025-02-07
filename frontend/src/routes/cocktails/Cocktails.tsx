@@ -1,30 +1,15 @@
-import { useEffect, useState } from "react";
-
-import { getCategories } from "../../api/api-actions";
-import type { ApiCategories } from "../../types/api-types";
 import { CategoryLayout } from "../../pageComponents/Category/CategoryLayout";
+import { useFecthCategories } from "../hooks/useFecthCategories";
+
+const url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
 
 export default function Cocktails() {
-    const [categories, setCategories] = useState<ApiCategories[] | null>([]);
+    const { categories, error } = useFecthCategories(url)
 
-    
-    useEffect(() => {
-        const fetchCategories = async () => {
-            try {
-                const data: ApiCategories[] = await getCategories('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
+    if (error) {
+        return <p>Error : {error}</p>
+    }
 
-                console.log(data);
+    return <CategoryLayout title="Cocktails" cards={categories} />
 
-                setCategories(data);
-            } catch (error) {
-                setCategories(null);
-                throw error
-            }
-        }
-
-        fetchCategories();
-    }, [])
-
-    return <CategoryLayout title="Cocktails" cards={categories}  />
-    
 }

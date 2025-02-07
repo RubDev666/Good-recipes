@@ -21,5 +21,5 @@ export const CategoryCard: React.FC<Props> = ({ strCategory, strCategoryDescript
                 </S.Container_p>
             </S.Container>
         </S.StyledLink>
-    )
+    ) 
 }
