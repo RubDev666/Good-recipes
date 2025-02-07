@@ -1,9 +1,8 @@
-import { Link } from "react-router";
-
 import MainContent from "../pageComponents/main/mainContent/MainContent";
 import SectionSlider from "../pageComponents/main/sectionSlider/SectionSlider";
+import ViewMoreSection from "../pageComponents/main/ViewMoreSection/ViewMoreSection.tsx";
 
-import type { ApiCategory } from "../types/api-types";
+import type { ApiCategory , TagRecipe } from "../types/api-types";
 
 const RECIPES_SECTIONS: { [x: string]: ApiCategory[] } = {
     meals: [
@@ -82,6 +81,20 @@ const RECIPES_SECTIONS: { [x: string]: ApiCategory[] } = {
     ]
 }
 
+const CATEGORIES_SECTIONS: {[x: string]: {tag: TagRecipe, nameCategories: string[]}} = {
+    meals: {
+        tag: 'meals',
+        nameCategories: [
+            'Chicken',
+            'Starter',
+            'Beef',
+            'Vegetarian',
+            'Goat',
+            'SeaFood'
+        ]
+    }
+}
+
 export default function Main() {
     return (
         <>
@@ -89,22 +102,7 @@ export default function Main() {
 
             <SectionSlider title="Meals for you" tag="meals" recipes={RECIPES_SECTIONS.meals} />
 
-            <section className='main-sections'>
-                <div>
-                    <h3 className='slider-title'>What are you going to cook today?</h3>
-
-                    <div className='category-links-container'>
-                        <Link to='/meals'>Chiken</Link>
-                        <Link to='/meals'>Starter</Link>
-                        <Link to='/meals'>Beef</Link>
-                        <Link to='/meals'>Vegetarian</Link>
-                        <Link to='/meals'>Goat</Link>
-                        <Link to='/meals'>SeaFood</Link>
-                    </div>
-
-                    <Link to='/meals' className='view-more-link'>View more categories</Link>
-                </div>
-            </section>
+            <ViewMoreSection />
 
             <SectionSlider title="For coffee lovers" tag="cocktails" recipes={RECIPES_SECTIONS.coffees} />
         </>
