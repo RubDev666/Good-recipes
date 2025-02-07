@@ -8,7 +8,7 @@
   border-bottom: 1px solid #ddd;
 }
 
-.container {
+.container-header {
   display: flex;
   align-items: center;
   width: 100%;

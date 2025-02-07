@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from './CardRecipe.styles'
 import { Link } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faCutlery } from '@fortawesome/free-solid-svg-icons'
+import { faMartiniGlassCitrus, faCutlery } from '@fortawesome/free-solid-svg-icons'
 
 import type { CardRecipeProps } from '../../../types/props'
 
@@ -22,7 +22,7 @@ export const CardRecipe: React.FC<CardRecipeProps> = ({ title, img, tag, id }) =
                         </S.Tag_food>
                         :
                         <S.Tag_drinks>
-                            <FontAwesomeIcon icon={faCoffee} />
+                            <FontAwesomeIcon icon={faMartiniGlassCitrus} />
                         </S.Tag_drinks>
 
                     }

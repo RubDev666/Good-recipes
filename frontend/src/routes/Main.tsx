@@ -90,7 +90,7 @@ export default function Main() {
             <SectionSlider title="Meals for you" tag="meals" recipes={RECIPES_SECTIONS.meals} />
 
             <section className='main-sections'>
-                <div className="container">
+                <div>
                     <h3 className='slider-title'>What are you going to cook today?</h3>
 
                     <div className='category-links-container'>

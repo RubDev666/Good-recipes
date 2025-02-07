@@ -7,6 +7,7 @@ import {
   faTimes,
   faBowlFood,
   faMartiniGlassCitrus,
+  faCutlery
 } from "@fortawesome/free-solid-svg-icons";
 
 export const Header = () => {
@@ -14,7 +15,7 @@ export const Header = () => {
 
   return (
     <header className="header">
-      <div className="container">
+      <div className="container container-header">
         {/* Logo */}
         <Link to="/" className="logo">
           <img
@@ -27,7 +28,7 @@ export const Header = () => {
         {/* Menú de navegación */}
         <nav className="nav">
           <Link to="/meals" className="nav-link">
-            <FontAwesomeIcon icon={faBowlFood} />
+            <FontAwesomeIcon icon={faCutlery} />
             Meals
           </Link>
           <Link to="/cocktails" className="nav-link">

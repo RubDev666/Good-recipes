@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca1ac8e7-d4fc-46a5-be77-2513cc7bdc66" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/pageComponents/main/sectionSlider/sectionSlider.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pageComponents/main/sectionSlider/sectionSlider.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/CardRecipe/CardRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/CardRecipe/CardRecipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/routes/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/routes/cocktails/Cocktails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/cocktails/Cocktails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/routes/hooks/useFecthCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/hooks/useFetchCategories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/routes/meals/Meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/meals/Meals.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <workItem from="1738950568201" duration="557000" />
       <workItem from="1738951157257" duration="472000" />
       <workItem from="1738951667496" duration="557000" />
-      <workItem from="1738952267884" duration="8968000" />
+      <workItem from="1738952267884" duration="11401000" />
     </task>
     <servers />
   </component>
