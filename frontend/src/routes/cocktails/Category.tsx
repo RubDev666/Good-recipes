@@ -11,7 +11,7 @@ export default function CategoryCocktails() {
 
     useEffect(() => {
         const fetchCategorie = async () => {
-            const category = location.pathname.split('/')[3];
+            const category = location.pathname.split('/')[3].replace('_', '/');
 
             try {
                 const data: ApiDrinkCategory[] = await getRecipes(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`);

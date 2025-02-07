@@ -92,7 +92,7 @@ export async function getRecipe(type: TagRecipe, id: string) {
         const res = await fetch(url).then(respuesta => respuesta.json());
 
         return res.meals[0];
-    } else if (type === 'drinks') {
+    } else if (type === 'cocktails') {
         const url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + id;
 
         const res = await fetch(url).then(respuesta => respuesta.json());

@@ -11,7 +11,7 @@ export const CardRecipe: React.FC<CardRecipeProps> = ({ title, img, tag, id }) =
         <S.Container>
             <Link to={`${tag}/recipe/${id}`}>
                 <S.Container_image>
-                    <img src={img} alt={title} />
+                    <img src={img} alt={title} loading='lazy' />
                 </S.Container_image>
                 <S.Container_info>
                     {
