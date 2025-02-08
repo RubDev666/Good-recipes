@@ -2,22 +2,21 @@ import {Link} from "react-router";
 
 import {Section} from "./viewMoreSection.styles.ts";
 
-export default  function ViewMoreSection() {
+import type {ViewMoreSectionProps} from "../../../types/props.ts";
+
+export default  function ViewMoreSection({tag, nameCategories, title}: ViewMoreSectionProps) {
     return(
         <Section className='main-sections'>
             <div>
-                <h3 className='slider-title'>What are you going to cook today?</h3>
+                <h3 className='slider-title'>{title}</h3>
 
                 <div className='category-links-container'>
-                    <Link to='/meals'>Chicken</Link>
-                    <Link to='/meals'>Starter</Link>
-                    <Link to='/meals'>Beef</Link>
-                    <Link to='/meals'>Vegetarian</Link>
-                    <Link to='/meals'>Goat</Link>
-                    <Link to='/meals'>SeaFood</Link>
+                    {nameCategories.map(nameCategory => (
+                        <Link key={nameCategory} to={`/${tag}/category/${nameCategory}`}>{nameCategory}</Link>
+                    ))}
                 </div>
 
-                <Link to='/meals' className='view-more-link'>View more categories</Link>
+                <Link to={`/${tag}`} className='view-more-link'>View more categories</Link>
             </div>
         </Section>
     )

@@ -2,7 +2,8 @@ import MainContent from "../pageComponents/main/mainContent/MainContent";
 import SectionSlider from "../pageComponents/main/sectionSlider/SectionSlider";
 import ViewMoreSection from "../pageComponents/main/ViewMoreSection/ViewMoreSection.tsx";
 
-import type { ApiCategory , TagRecipe } from "../types/api-types";
+import type { ApiCategory } from "../types/api-types";
+import type {ViewMoreSectionProps} from "../types/props.ts";
 
 const RECIPES_SECTIONS: { [x: string]: ApiCategory[] } = {
     meals: [
@@ -81,9 +82,10 @@ const RECIPES_SECTIONS: { [x: string]: ApiCategory[] } = {
     ]
 }
 
-const CATEGORIES_SECTIONS: {[x: string]: {tag: TagRecipe, nameCategories: string[]}} = {
+const CATEGORIES_SECTIONS: {[x: string]: ViewMoreSectionProps} = {
     meals: {
         tag: 'meals',
+        title: 'What are you going to cook today?',
         nameCategories: [
             'Chicken',
             'Starter',
@@ -91,6 +93,17 @@ const CATEGORIES_SECTIONS: {[x: string]: {tag: TagRecipe, nameCategories: string
             'Vegetarian',
             'Goat',
             'SeaFood'
+        ]
+    },
+    cocktails: {
+        tag: 'cocktails',
+        title: 'The best cocktails for every moment',
+        nameCategories: [
+            'Soft Drink',
+            'Beer',
+            'Cocoa',
+            'Cocktail',
+            'Ordinary Drink'
         ]
     }
 }
@@ -102,9 +115,11 @@ export default function Main() {
 
             <SectionSlider title="Meals for you" tag="meals" recipes={RECIPES_SECTIONS.meals} />
 
-            <ViewMoreSection />
+            <ViewMoreSection title={CATEGORIES_SECTIONS.meals.title} tag={CATEGORIES_SECTIONS.meals.tag} nameCategories={CATEGORIES_SECTIONS.meals.nameCategories} />
 
             <SectionSlider title="For coffee lovers" tag="cocktails" recipes={RECIPES_SECTIONS.coffees} />
+
+            <ViewMoreSection title={CATEGORIES_SECTIONS.cocktails.title} tag={CATEGORIES_SECTIONS.cocktails.tag} nameCategories={CATEGORIES_SECTIONS.cocktails.nameCategories} />
         </>
     )
 }
