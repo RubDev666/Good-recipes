@@ -4,13 +4,17 @@ import { useLocation } from "react-router";
 import { getRecipes } from "../../api/api-actions";
 import type { ApiMealCategory } from "../../types/api-types";
 
+import RecipesLayout from "../../pageComponents/recipes/RecipesLayout.tsx";
+
 export default function CategoryMeals() {
-    const [recipes, setRecipes] = useState<ApiMealCategory[] | null>([]);
+    const [recipes, setRecipes] = useState<ApiMealCategory[]>([]);
+    const [nameCategory, setCategory] = useState('');
+    //const [loading, setLoading] = useState(true);
 
     const location = useLocation();
 
     useEffect(() => {
-        const fetchCategorie = async () => {
+        const fetchCategory = async () => {
             const category = location.pathname.split('/')[3];
 
             try {
@@ -19,17 +23,17 @@ export default function CategoryMeals() {
                 console.log(data);
 
                 setRecipes(data);
+                setCategory(category)
             } catch (error) {
-                setRecipes(null);
+                console.log(error);
+                setRecipes([]);
             }
         }
 
-        fetchCategorie();
-    }, [])
+        fetchCategory();
+    }, [location])
 
     return (
-        <>
-            <p>category meals</p>
-        </>
+        <RecipesLayout recipes={recipes} tag={'meals'} title={nameCategory} />
     )
 }

@@ -15,39 +15,27 @@ import { StyledFooter, Container, FooterMenuNavigation, FooterNavigation, Footer
 
 export const footerItems = [
     {
-        title: "Mapa del sitio",
+        title: "Site map",
         items: [
             {
-                label: "Todas las recetas",
-                href: "#",
+                label: "Meal recipes",
+                href: "/meals",
             },
             {
-                label: "Listas Nestlé",
-                href: "#",
+                label: "Cocktail recipes",
+                href: "/cocktails",
             },
             {
-                label: "Elige los ingredientes",
+                label: "Favourites",
                 href: "#",
-            },
-            {
-                label: "Recetarios descargables",
-                href: "#",
-            },
-            {
-                label: "Planea tu menú",
-                href: "#",
-            },
-            {
-                label: "Sitemap",
-                href: "#",
-            },
+            }
         ],
     },
     {
-        title: "Escuela del sabor",
+        title: "About us",
         items: [
             {
-                label: "Todos los artículos",
+                label: "All articles",
                 href: "#",
             },
             {
@@ -55,62 +43,34 @@ export const footerItems = [
                 href: "#",
             },
             {
-                label: "Cocción y técnica",
+                label: "Learning to cook",
                 href: "#",
             },
             {
-                label: "Recetas caseras",
+                label: "Ingredients",
                 href: "#",
             },
             {
-                label: "Aprendiendo a cocinar",
+                label: "Utensils",
                 href: "#",
-            },
-            {
-                label: "Ingredientes",
-                href: "#",
-            },
-            {
-                label: "Utensilios",
-                href: "#",
-            },
-            {
-                label: "Cocinando con niños",
-                href: "#",
-            },
+            }
         ],
     },
     {
-        title: "Categorías de recetas",
+        title: "Collaborators for this  project",
         items: [
             {
-                label: "Todas las categorías",
-                href: "#",
+                label: "HopeDark22",
+                href: "https://github.com/Darkhope22",
             },
             {
-                label: "Desayunos",
-                href: "#",
+                label: "Ulises Saucedo",
+                href: "https://github.com/Ulises-Saucedo",
             },
             {
-                label: "Recetas con pollo",
-                href: "#",
-            },
-            {
-                label: "Parrilladas",
-                href: "#",
-            },
-            {
-                label: "Plato fuerte",
-                href: "#",
-            },
-            {
-                label: "Postres",
-                href: "#",
-            },
-            {
-                label: "Pasteles",
-                href: "#",
-            },
+                label: "Nicolás García López",
+                href: "https://github.com/XnicolasG",
+            }
         ],
     },
 ];
@@ -118,43 +78,31 @@ export const footerItems = [
 export const socialLinks = [
     {
         icon: faInstagram,
-        href: "https://www.instagram.com/recetasnestle/",
+        href: "#",
     },
     {
         icon: faFacebook,
-        href: "https://www.facebook.com/Recetas-Nestl%C3%A9-142919275994/",
+        href: "#",
     },
     {
         icon: faYoutube,
-        href: "https://www.youtube.com/channel/UCWIgEeSnQT6tZ6BLAh_ot5Q",
+        href: "#",
     },
     {
         icon: faPinterest,
-        href: "https://www.pinterest.com/recetasnestle/",
+        href: "#",
     },
     {
         icon: faTiktok,
-        href: "https://www.tiktok.com/@recetasnestlemx",
+        href: "#",
     },
 ];
 
 export const copyrightItems = [
     {
-        href: "#",
-        label: "Aviso de privacidad",
-    },
-    {
-        href: "#",
-        label: "Términos y condiciones",
-    },
-    {
-        href: "#",
-        label: "Contáctanos",
-    },
-    {
-        href: "#",
-        label: "Configuración de cookies",
-    },
+        href: "https://www.recetasnestle.com.mx/",
+        label: "Design inspired from the original 'Recetas Nestlé' website",
+    }
 ];
 
 export const Footer = () => {
@@ -203,8 +151,7 @@ export const Footer = () => {
 
                 <Copyright>
                     <p>
-                        ©2019, Nestlé. Marcas registradas por Société des produits Nestlé,
-                        S.A. Vevey (Suiza)
+                        ©2025 Created by RubDeveloper
                     </p>
                     <ul>
                         {copyrightItems.map((item, idx) => (

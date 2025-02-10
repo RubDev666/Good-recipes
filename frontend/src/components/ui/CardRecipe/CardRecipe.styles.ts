@@ -4,7 +4,7 @@ export const Container = styled.article`
     width: 100%;
     display:flex;
     flex-direction: column;
-    
+
     a {
         color: #252525;
         text-decoration: none;

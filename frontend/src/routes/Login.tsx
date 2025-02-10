@@ -10,21 +10,21 @@ export default function Login() {
                 </div>
 
                 <Form className="form">
-                    <h3 className="formTitle">Ingresa con tu correo electrónico</h3>
+                    <h3 className="formTitle">Login</h3>
 
                     <InputField
-                        labelName="Correo electrónico *"
+                        labelName="Email *"
                         fieldId="email"
                         fieldName="emailField"
-                        fieldPlaceholder="Correo electrónico*"
+                        fieldPlaceholder="Email*"
                         fieldType="email"
                         autoComplete="off"
                     />
                     <InputField
-                        labelName="Contraseña *"
+                        labelName="Password *"
                         fieldId="password"
                         fieldName="passwordField"
-                        fieldPlaceholder="Contraseña *"
+                        fieldPlaceholder="Password *"
                         fieldType="password"
                         autoComplete="off"
                     />
@@ -32,7 +32,7 @@ export default function Login() {
                     <button type="submit"
                         className="submitButton"
                     >
-                        Iniciar sesión
+                        Login
                     </button>
                 </Form>
             </section>

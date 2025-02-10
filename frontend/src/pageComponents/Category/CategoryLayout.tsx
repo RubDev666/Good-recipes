@@ -13,7 +13,7 @@ export const CategoryLayout: React.FC<Props> = ({ title, cards }) => {
         <S.LayoutContainer>
             <S.Image_container>
                 <img
-                    src="https://www.recetasnestle.com.mx/sites/default/files/styles/webp/public/2022-08/header-recetarios-foodlist-desktop.jpg.webp?itok=rEqRcHyU"
+                    src="/images/category-recipes.webp"
                     alt="Category banner" />
             </S.Image_container>
             <S.Titles_container>

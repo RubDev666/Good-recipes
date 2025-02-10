@@ -9,37 +9,37 @@ export default function Register() {
             </div>
 
             <Form className="form">
-                <h3 className="formTitle">Registrate con tu correo electrónico</h3>
+                <h3 className="formTitle">Register with your Email</h3>
 
                 <InputField
-                    labelName="Nombre *"
+                    labelName="Name *"
                     fieldId="username"
                     fieldName="usernameField"
-                    fieldPlaceholder="Nombre *"
+                    fieldPlaceholder="Name *"
                     fieldType="text"
                     autoComplete="off"
                 />
                 <InputField
-                    labelName="Correo electrónico *"
+                    labelName="Email *"
                     fieldId="email"
                     fieldName="emailField"
-                    fieldPlaceholder="Correo electrónico*"
+                    fieldPlaceholder="Email*"
                     fieldType="email"
                     autoComplete="off"
                 />
                 <InputField
-                    labelName="Contraseña *"
+                    labelName="Password *"
                     fieldId="password"
                     fieldName="passwordField"
-                    fieldPlaceholder="Contraseña *"
+                    fieldPlaceholder="Password *"
                     fieldType="password"
                     autoComplete="off"
                 />
                 <InputField
-                    labelName="Confirmar contraseña *"
+                    labelName="Confirm password *"
                     fieldId="confirmPassword"
                     fieldName="confirmPasswordField"
-                    fieldPlaceholder="Confirmar contraseña *"
+                    fieldPlaceholder="Confirm password *"
                     fieldType="password"
                     autoComplete="off"
                 />
@@ -47,7 +47,7 @@ export default function Register() {
                 <button type="submit"
                     className="submitButton"
                 >
-                    Registrarse
+                    Register
                 </button>
             </Form>
 
