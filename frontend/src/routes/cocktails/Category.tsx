@@ -4,8 +4,11 @@ import { useLocation } from "react-router";
 import { getRecipes } from "../../api/api-actions";
 import type { ApiDrinkCategory } from "../../types/api-types";
 
+import RecipesLayout from "../../pageComponents/recipes/RecipesLayout.tsx";
+
 export default function CategoryCocktails() {
-    const [recipes, setRecipes] = useState<ApiDrinkCategory[] | null>([]);
+    const [recipes, setRecipes] = useState<ApiDrinkCategory[]>([]);
+    const [nameCategory, setCategory] = useState('');
 
     const location = useLocation();
 
@@ -16,11 +19,13 @@ export default function CategoryCocktails() {
             try {
                 const data: ApiDrinkCategory[] = await getRecipes(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`);
 
-                console.log(data);
+                //console.log(data);
 
                 setRecipes(data);
+                setCategory(category.split('%20').join(' '))
             } catch (error) {
-                setRecipes(null);
+                console.log(error);
+                setRecipes([]);
             }
         }
 
@@ -28,8 +33,6 @@ export default function CategoryCocktails() {
     }, [])
 
     return (
-        <>
-            <p>category cocktails</p>
-        </>
+        <RecipesLayout recipes={recipes} tag={'cocktails'} title={nameCategory} />
     )
 }

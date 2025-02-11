@@ -17,7 +17,7 @@ export default function RecipeMeal() {
             try {
                 const data: ApiRecipe = await getRecipe('meals', id);
 
-                console.log(data);
+                //console.log(data);
 
                 setRecipe(data);
             } catch (error) {
@@ -29,9 +29,9 @@ export default function RecipeMeal() {
         fetchRecipe();
     }, [])
 
-    return (
+    if(recipe) return (
         <>
-            <RecipeComponent />
+            <RecipeComponent recipe={recipe} />
         </>
     )
 }

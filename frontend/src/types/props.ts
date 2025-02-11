@@ -1,4 +1,4 @@
-import type{ ApiCategory, TagRecipe } from "./api-types";
+import type{ ApiCategory, TagRecipe, ApiRecipe } from "./api-types";
 import type { SliderFeatures } from "./global";
 
 export type SliderProps = {
@@ -17,3 +17,7 @@ export type CardRecipeProps = Pick<SectionSliderProps, 'tag' | 'title'> & {
 export type ViewMoreSectionProps = Pick<SectionSliderProps, 'tag' | 'title'> & {
     nameCategories: string[]
 };
+
+export type RecipeProps = {
+    recipe: ApiRecipe;
+}

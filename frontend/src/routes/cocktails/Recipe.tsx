@@ -17,7 +17,7 @@ export default function RecipeCocktail() {
             try {
                 const data: ApiRecipe = await getRecipe('cocktails', id);
 
-                console.log(data);
+                //console.log(data);
 
                 setRecipe(data);
             } catch (error) {
@@ -29,9 +29,9 @@ export default function RecipeCocktail() {
         fetchRecipe();
     }, [])
 
-    return(
+    if(recipe) return(
         <>
-            <RecipeComponent />
+            <RecipeComponent recipe={recipe} />
         </>
     )
 }

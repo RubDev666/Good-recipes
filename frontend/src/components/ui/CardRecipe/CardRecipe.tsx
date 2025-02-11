@@ -9,7 +9,7 @@ import type { CardRecipeProps } from '../../../types/props'
 export const CardRecipe: React.FC<CardRecipeProps> = ({ title, img, tag, id }) => {
     return (
         <S.Container>
-            <Link to={`${tag}/recipe/${id}`}>
+            <Link to={`/${tag}/recipe/${id}`}>
                 <S.Container_image>
                     <img src={img} alt={title} loading='lazy' />
                 </S.Container_image>

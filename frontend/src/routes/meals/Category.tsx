@@ -9,7 +9,6 @@ import RecipesLayout from "../../pageComponents/recipes/RecipesLayout.tsx";
 export default function CategoryMeals() {
     const [recipes, setRecipes] = useState<ApiMealCategory[]>([]);
     const [nameCategory, setCategory] = useState('');
-    //const [loading, setLoading] = useState(true);
 
     const location = useLocation();
 
@@ -20,7 +19,7 @@ export default function CategoryMeals() {
             try {
                 const data: ApiMealCategory[] = await getRecipes(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
 
-                console.log(data);
+                //console.log(data);
 
                 setRecipes(data);
                 setCategory(category)
